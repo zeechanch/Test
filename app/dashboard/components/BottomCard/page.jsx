@@ -14,13 +14,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0b] overflow-none">
+    <div className="w-full bg-transparent">
       <div 
         className="origin-top-left"
         style={{ 
-          transform: 'scale(1.36)',
-          width: `${100 / 1.36}%`,
-          height: `${100 / 1.36}%`
+          transform: 'scale(1.0)',
+          width: '100%',
+          height: 'auto'
         }}
       >
         {selectedProject ? (
@@ -29,7 +29,7 @@ export default function App() {
             projectName={selectedProject}
           />
         ) : (
-          <ProjectListView onProjectClick={handleProjectClick} />
+          <div className="flex justify-center"><ProjectListView onProjectClick={handleProjectClick} /></div>
         )}
       </div>
     </div>
@@ -38,7 +38,7 @@ export default function App() {
 
 function ProjectListView({ onProjectClick }) {
   return (
-    <div className="relative w-[938px] h-[939px]">
+    <div className="relative w-[938px] h-[939px] mx-auto">
       <Frame2 />
       {/* Add click handlers to project areas */}
       <div 
@@ -67,7 +67,7 @@ function ProjectListView({ onProjectClick }) {
 
 function ProjectDetailView({ onClose, projectName }) {
   return (
-    <div className="relative w-[936px] h-[1117px]">
+    <div className="relative w-[936px] h-[1117px] mx-auto">
       <Frame3 />
       {/* Close button */}
       <button 

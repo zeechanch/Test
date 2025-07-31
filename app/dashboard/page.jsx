@@ -31,7 +31,9 @@ export default function Dashboard() {
 
           {/* Bottom card section */}
           <div className="mt-8 flex items-center justify-center">
+            <div className="w-[1275px]">
             <BottomCard />
+            </div>
           </div>
 
         </div>
